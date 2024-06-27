@@ -1,5 +1,6 @@
 package main;
 
+import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Models.Node;
 
@@ -8,10 +9,10 @@ public class App {
         System.out.println("Estructuras de Datos NO Lineanes\n");
 
         runArbolesBinarios();
+        runAVLTree();
     }
 
     private static void runArbolesBinarios() {
-
         System.out.println("\t\tArboles Binarios\n");
 
         Node root = new Node(1);
@@ -47,4 +48,16 @@ public class App {
         arbolBinario.postOrderIterative(root);
         System.out.println();
     }
+
+
+    private static void runAVLTree(){
+         AVLTree tree = new AVLTree();
+
+        int[] values = { 10, 20, 15, 24, 9, 8, 21, 23, 50, 25 };
+
+        for (int value : values) {
+            tree.insert(value);
+        }
+    }
+
 }

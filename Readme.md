@@ -9,3 +9,5 @@ josealbertoayalazumba@gmail.com
 - Initial version of the project.
 ### Version 2.2.1
 - Estructuras No Lineales – Ejercicios
+### Version 2.2.2
+- Arboles AVL
