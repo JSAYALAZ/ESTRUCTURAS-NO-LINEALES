@@ -1,15 +1,26 @@
 package main;
 
+import java.util.HashSet;
+
 import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
+import main.Materia.Controllers.Graph;
+import main.Materia.Controllers.Sets;
 import main.Materia.Models.Node;
+import main.Materia.Models.NodeGraph;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Estructuras de Datos NO Lineanes\n");
 
-        runArbolesBinarios();
-        runAVLTree();
+        runHash();
+        // runArbolesBinarios();
+        // runAVLTree();
+        // runGraph();
+    }
+
+    private static void runHash(){
+        new Sets();
     }
 
     private static void runArbolesBinarios() {
@@ -49,6 +60,21 @@ public class App {
         System.out.println();
     }
 
+    private static void runGraph(){
+        Graph graph = new Graph();
+        NodeGraph node1 = graph.addNode(1);
+        NodeGraph node2 = graph.addNode(2);
+        NodeGraph node3 = graph.addNode(3);
+        NodeGraph node4 = graph.addNode(4);
+        NodeGraph node5 = graph.addNode(5);
+
+        graph.addEdge(node1 , node2);
+        graph.addEdge(node1 , node3);
+        graph.addEdge(node2 , node4);
+        graph.addEdge(node4 , node5);
+
+        graph.printGraph();
+    }
 
     private static void runAVLTree(){
          AVLTree tree = new AVLTree();
