@@ -6,7 +6,7 @@ import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 public class Sets {
-    public Sets(){
+    public Sets() {
         construirSet();
         construirHashSet();
         construirLinkedSet();
@@ -14,7 +14,7 @@ public class Sets {
         construirTreeSetConComparacion();
     }
 
-    public void construirSet(){
+    public void construirSet() {
         HashSet<String> conjunto = new HashSet<>();
         conjunto.add("Manzana");
         conjunto.add("Banana");
@@ -40,7 +40,7 @@ public class Sets {
         System.out.println("Tamaño del set: " + sizeSet);
     }
 
-    public void construirHashSet(){
+    public void construirHashSet() {
         LinkedHashSet<String> conjunto = new LinkedHashSet<>();
         conjunto.add("Manzana");
         conjunto.add("Banana");
@@ -54,7 +54,7 @@ public class Sets {
         System.out.println("LinkedHashSet: " + conjunto);
     }
 
-    public void construirLinkedSet(){
+    public void construirLinkedSet() {
         LinkedHashSet<String> conjunto = new LinkedHashSet<>();
         conjunto.add("Manzana");
         conjunto.add("Banana");
@@ -68,7 +68,7 @@ public class Sets {
         System.out.println("LinkedHashSet (mismo que HashSet en este contexto): " + conjunto);
     }
 
-    public void construirTreeSet(){
+    public void construirTreeSet() {
         TreeSet<String> conjunto = new TreeSet<>();
         conjunto.add("Manzana");
         conjunto.add("Banana");
@@ -82,7 +82,7 @@ public class Sets {
         System.out.println("TreeSet: " + conjunto);
     }
 
-    public void construirTreeSetConComparacion(){
+    public void construirTreeSetConComparacion() {
         Comparator<String> comparadorOrderInverso = new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {

@@ -9,17 +9,18 @@ import main.Materia.Models.NodeGraph;
 
 public class Graph {
     private List<NodeGraph> nodes;
+    
     public Graph(){
         this.nodes = new ArrayList<>();
     }
 
     public NodeGraph addNode(int value){
-        NodeGraph newNode = new NodeGraph(value);
+       NodeGraph newNode = new NodeGraph(value);
         nodes.add(newNode);
         return newNode;
     }
 
-    public void addEdge(NodeGraph src, NodeGraph dest){
+    public void addEdge(NodeGraph src,NodeGraph dest){
         src.addNeighbor(dest);
         dest.addNeighbor(src);
     }
@@ -91,4 +92,14 @@ public class Graph {
             System.out.println();
         }
     }
+
+    public List<NodeGraph> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<NodeGraph> nodes) {
+        this.nodes = nodes;
+    }
+
+    
 }
